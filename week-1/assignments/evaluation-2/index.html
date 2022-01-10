@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lab-7 Form</title>
+    <link
+      rel="stylesheet"
+      href="/xml-and-js/week-1/assignments/evaluation-2/index.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <form name="evaluationForm">
+        <!-- Fieldset for box style -->
+        <div id="items">
+          <span id="text">Your Email*: </span>
+          <input type="email" name="Email" id="AI-email" size="50" /><br />
+        </div>
+        <div id="items">
+          <span id="text">Date of visit: </span>
+          <input
+            type="date"
+            name="Email"
+            id="AI-date"
+            size="50"
+            placeholder="mm/dd/yyyy"
+          /><br />
+        </div>
+
+        Your Comment: <br />
+        <textarea id="comment" name="comment" rows="6" cols="70"></textarea>
+        <br />
+        <input
+          type="button"
+          name="submit"
+          value="Submit"
+          onclick="submitForm()"
+        />
+      </form>
+
+      <div id="submit_message"></div>
+    </div>
+
+    <script src="/xml-and-js/week-1/assignments/evaluation-2/index.js"></script>
+  </body>
+</html>
