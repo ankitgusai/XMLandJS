@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- To utilise previous (q1) strcture for multiple users we can modify it to include array-->
+
+<!--  here users is a root, with users_item is a repeatative block, which can be used adde as many user data as we want -->
+<users>
+    <!-- first element of the array -->
+    <user_item>
+    <f_name>Ankitgiri</f_name>
+    <l_name>Gusai</l_name>
+    <hobbies>
+        <item>Video Games</item>
+        <item>Cricket</item>
+        <item>Internet</item>
+    </hobbies>
+    <hobbies>
+        <item>Video Games</item>
+        <item>Cricket</item>
+        <item>Internet</item>
+    </hobbies>
+    </user_item>
+    <!-- can add more element of the array from here on -->
+</users>
+
