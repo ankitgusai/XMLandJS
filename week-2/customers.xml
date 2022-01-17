@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE customers 
+[
+  <!ELEMENT customers (customer+)>
+  <!ELEMENT customer (name, address, phone, email?, orders)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT orders (order+)>
+  <!ELEMENT order (orderDate, items)>
+  <!ELEMENT orderDate (#PCDATA)>
+  <!ELEMENT items (item+)>
+  <!ELEMENT item (itemPrice, itemQty)>
+  <!ELEMENT itemPrice (#PCDATA)>
+  <!ELEMENT itemQty (#PCDATA)>
+]>
+<customers>
+  <customer>
+    <name>John Michael</name>
+    <address>
+      <![CDATA[
+      41 West Plankton Avenue
+      Orlando, FL 32820
+      ]]>]
+    </address>
+    <phone>(407) 555-3476</phone>
+    <email>jk@example.net</email>
+    <orders>
+      <order>
+        <orderDate>2021-06-03</orderDate>
+        <items>
+          <item>
+            <itemPrice>$35.99</itemPrice>
+            <itemQty>3</itemQty>
+          </item>
+        </items>
+      </order>
+    </orders>
+  </customer>
+  <customer>
+    <name>Sarah Michael</name>
+    <address>
+      <![CDATA[
+      41 West Plankton Avenue
+      Orlando, FL 32820
+      ]]>]
+    </address>
+    <phone>(407) 555-1234</phone>
+    <orders>
+      <order>
+        <orderDate>2021-10-10</orderDate>
+        <items>
+          <item>
+            <itemPrice>$45.99</itemPrice>
+            <itemQty>1</itemQty>
+          </item>
+        </items>
+      </order>
+    </orders>
+  </customer>
+</customers>
