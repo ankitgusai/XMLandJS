@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<user_contacts>
+    <item>
+        <name>Joe Marini</name>
+        <email>joe@joe.com</email>
+        <phone_numbers>
+            <item type="home">+1 (415) 555-1234</item>
+            <item type="work">+1 (800) 555-9867</item>
+            <item type="mobile">+1 (510) 555-1212</item>
+        </phone_numbers>
+    </item>
+</user_contacts>
