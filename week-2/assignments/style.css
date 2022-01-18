@@ -1,0 +1,17 @@
+originalName {
+  font-size: 25px;
+}
+
+category {
+  display: block;
+}
+
+menuItem {
+  background-color: #00000020;
+}
+
+indicator {
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+}
