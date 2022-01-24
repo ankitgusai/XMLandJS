@@ -1,0 +1,41 @@
+<!DOCTYPE products 
+[
+<!ELEMENT products (product)+>
+<!ATTLIST products
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT product (productName,manufacturer,description?,prices,
+                   productItems)>
+<!ATTLIST product
+  xmlns CDATA #FIXED ''
+  createdAt NMTOKEN #REQUIRED
+  shippable NMTOKEN #REQUIRED
+  sku NMTOKEN #REQUIRED>
+
+<!ELEMENT productName (#PCDATA)>
+<!ATTLIST productName
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT manufacturer (#PCDATA)>
+<!ATTLIST manufacturer
+  xmlns CDATA #FIXED ''
+  id NMTOKEN #REQUIRED>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT prices (price)+>
+<!ATTLIST prices
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT productItems (#PCDATA)>
+<!ATTLIST productItems
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price
+  xmlns CDATA #FIXED ''>
+
+]>
+
