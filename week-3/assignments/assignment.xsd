@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="catalog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="product"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="catalog_item"/>
+      </xs:sequence>
+      <xs:attribute name="description" use="required"/>
+      <xs:attribute name="product_id" use="required"/>
+      <xs:attribute name="product_image" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="catalog_item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="item_number"/>
+        <xs:element ref="price"/>
+        <xs:element maxOccurs="unbounded" ref="size"/>
+      </xs:sequence>
+      <xs:attribute name="gender" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="item_number" type="xs:NCName"/>
+  <xs:element name="price" type="xs:decimal"/>
+  <xs:element name="size">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="color_swatch"/>
+      </xs:sequence>
+      <xs:attribute name="description" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="color_swatch">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="image" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
