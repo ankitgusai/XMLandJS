@@ -1,0 +1,26 @@
+<!DOCTYPE items 
+[
+<!ELEMENT items (item)+>
+<!ATTLIST items
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT item (name,size+,price+)>
+<!ATTLIST item
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT size (#PCDATA)>
+<!ATTLIST size
+  xmlns CDATA #FIXED ''
+  description NMTOKEN #REQUIRED>
+
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price
+  xmlns CDATA #FIXED ''
+  currency NMTOKEN #REQUIRED>
+  
+]>

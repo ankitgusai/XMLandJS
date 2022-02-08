@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+
+<items>
+    <item id="a332d8d2-86d7-11ec-a8a3-0242ac120002	">
+        <name>Microfleece hoodie</name>
+        <size description="XS">0 items</size>
+        <size description="S">3 items</size>
+        <size description="M">13 items</size>
+        <size description="L">5 items</size>
+        <size description="XL">2 items</size>
+        <price currency="US">$49.99</price>
+        <price currency="CAD">$59.99</price>
+    </item>
+    <item id="a332dac6-86d7-11ec-a8a3-0242ac120002">
+        <name>Vintage Soft Hoodie</name>
+        <size description="XS">3 items</size>
+        <size description="S">8 items</size>
+        <size description="M">25 items</size>
+        <size description="L">12 items</size>
+        <size description="XL">4 items</size>
+        <price currency="US">$39.99</price>
+        <price currency="CAD">$49.99</price>
+    </item>
+    <item id="a332dbf2-86d7-11ec-a8a3-0242ac120002">
+        <name>Crewneck Sweatshirt</name>
+        <size description="XS">0 items</size>
+        <size description="S">0 items</size>
+        <size description="M">15 items</size>
+        <size description="L">13 items</size>
+        <size description="XL">0 items</size>
+        <price currency="CAD">$47.97</price>
+    </item>
+    <item id="a332dd0a-86d7-11ec-a8a3-0242ac120002">
+        <name>French Terry Raglan Crewneck Sweatshirt</name>
+        <size description="XS">0 items</size>
+        <size description="S">0 items</size>
+        <size description="M">0 items</size>
+        <size description="L">1 items</size>
+        <size description="XL">0 items</size>
+        <price currency="US">$37.97</price>
+    </item>
+</items>

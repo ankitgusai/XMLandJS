@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Activity - Week 5</title>
+</head>
+
+<body>
+    <form onSubmit="submitForActivity(event)" action="" method="get">
+        Enter something in the box: <br />
+        <input type="text" name="inputbox" value="" required />
+        <br></br>
+        <div id="checkox_parent" style="border-style: solid; border-width: 1px; border-color: grey;">
+            <input type="checkbox" id="ch1" name="inputCheckbox1" value="VALUE">
+            <label for="ch1"> Checkbox1</label><br>
+
+            <input type="checkbox" id="ch2" name="inputCheckbox2" value="VALUE">
+            <label for="ch2"> Checkbox2</label><br>
+        </div>
+
+        <br></br>
+        <div id="radio_parent" style="border-style: solid; border-width: 1px; border-color: grey;">
+            <input type="radio" id="r1" name="fav_language" value="Radio1">
+            <label for="r1">Radio1</label><br>
+            <input type="radio" id="r2" name="fav_language" value="Radio2">
+            <label for="r2">Radio2</label><br>
+            <input type="radio" id="r3" name="fav_language" value="Radio3">
+            <label for="r3">Radio3</label>
+        </div>
+        <br></br>
+        <button type="submit">Click</button>
+    </form>
+    <script type="text/javascript" src="activity.js"></script>
+</body>
+
+</html>
