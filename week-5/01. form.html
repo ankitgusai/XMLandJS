@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Test Input</title>
+    <script language="JavaScript">
+      function testResults(event) {
+        event.preventDefault();
+
+        const form = event.target;
+
+        const inputControl = form.inputbox;
+        const inputValue = inputControl.value;
+
+        console.log(`Selected value: ${inputValue}`);
+
+        inputControl.value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <form onSubmit="return testResults(event)" action="" method="get">
+      Enter something in the box: <br />
+      <input type="text" name="inputbox" value="" required />
+      <button type="submit">Click</button>
+    </form>
+  </body>
+</html>
