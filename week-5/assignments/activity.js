@@ -15,7 +15,7 @@ const submitForActivity = (event) => {
         }
     }
 
-    console.log(`Input: ${inputValue}\ncheckbox1 checked? ${checkbox1Value} checkbox2 checked? ${checkbox2Value}\nRadio Button? ${radioButton}`);
+    console.log(`Input: ${inputValue}\ncheckbox1 checked?   ${checkbox1Value} checkbox2 checked? ${checkbox2Value}\nRadio Button? ${radioButton}`);
 
     form.inputbox.value = "";
 }
