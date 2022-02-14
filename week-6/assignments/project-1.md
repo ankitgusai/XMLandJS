@@ -1,0 +1,22 @@
+# Project 1
+
+- Divide into groups of 3 people
+- Project consists of N parts:
+  - Design and create xml file
+    - With at least 25 items in it
+    - Each item with at least 3 different fields
+    - Each item with at least 2 attributes
+  - Types declaration
+    - Create xsd file for created xml file
+  - HTML JS
+    - Table
+      - Create empty html table that would have column for each field and attribute of your xml item
+      - Dynamically load data from your xml into this table
+    - Filter Form
+      - With Submit and Reset buttons
+      - With text input, radio button, and checkboxes
+      - Use these inputs to filter data
+  - Documentation
+    - `team.md` - list of team members
+    - `{student-name}.md` - each team member has to create own .md file and describe how they contributed to this project. Provide as many details as you can as this project will be graded individually
+- Create `project-1/` folder in the root of your repo and push all the project files. Each team member has to have files in their repo, otherwise student won't be graded.

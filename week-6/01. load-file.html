@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = ({ target }) => {
+        if (target.readyState == 4 && target.status == 200) {
+          loadFile(target);
+        }
+      };
+      xhttp.open("GET", "http://localhost:8080/books.xml", true);
+      xhttp.send();
+
+      const loadFile = (xml) => {
+        const xmlDoc = xml.responseXML;
+        const firstTile =
+          xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        document.getElementById("demo").innerHTML = firstTile;
+      };
+    </script>
+  </body>
+</html>

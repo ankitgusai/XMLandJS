@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      const text =
+        "<bookstore><book>" +
+        "<title>Everyday Italian</title>" +
+        "<author>Giada De Laurentiis</author>" +
+        "<year>2005</year>" +
+        "</book></bookstore>";
+
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(text, "text/xml");
+
+      const firstTile =
+        xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+
+      document.getElementById("demo").innerHTML = firstTile;
+    </script>
+  </body>
+</html>
