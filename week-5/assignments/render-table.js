@@ -32,6 +32,8 @@ const renderTable = () => {
         const inputGender = document.getElementById(`input-gender`);
         const inputIP = document.getElementById(`input-ip`);
         
+        dataArray = data;
+
         if(fName.length>0){
             inputFname.value = fName;
             dataArray = data.filter(({ first_name }) => first_name.toLowerCase().includes(fName));
