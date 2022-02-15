@@ -11,7 +11,7 @@ const renderTable = (xmlData) => {
   if (!table) {
     throw new Error("No table element found");
   }
-const nodes = Array.from(xmlData.documentElement.childNodes).filter(
+  const nodes = Array.from(xmlData.documentElement.childNodes).filter(
     ({ nodeName }) => nodeName === `student`
   );
 
@@ -24,7 +24,7 @@ const nodes = Array.from(xmlData.documentElement.childNodes).filter(
 };
 
 const generateTableRow = (item) => {
-const rollNumber = item.attributes[0].textContent;
+  const rollNumber = item.attributes[0].textContent;
   const firstname = getElementText(item, 'firstname');
   const lastname = getElementText(item, 'lastname');
   const nickname = getElementText(item, 'nickname');
