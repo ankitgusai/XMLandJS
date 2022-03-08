@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office Tables</title>
+  <link rel='stylesheet' href='project1_data.css'/>
+</head>
+<body>
+    <h2>Office Tables Inventory</h2>
+    <form id="search" onreset="onReset()">
+    <input type="text" name="search" placeholder="enter a keyword" id="startsearch" />
+    </br></br>
+
+    
+    <p>Filter by Price:</p>
+    <input type="radio" id="priceRegular" name="price" value="Regular" >
+    <label for="price"> Regular Price</label></br>
+    <input type="radio" id="pricePremium" name="price" value="Premium" >
+    <label for="price"> Premium Price</label></br>
+    
+    
+    <p>Filter by Size:</p>
+    <input type="checkbox" id="size80" name="size" value="80-100" >
+    <label for="size"> 80-100cm </label></br>
+    <input type="checkbox" id="size100" name="size" value="100-120" >
+    <label for="size"> 100-120cm </label></br>
+    <input type="checkbox" id="size120" name="size" value="120-140" >
+    <label for="size"> 120-140cm </label></br>
+    <input type="checkbox" id="size140" name="size" value="140-160" >
+    <label for="size"> 140-160cm </label></br>
+    <input type="checkbox" id="size160" name="size" value="160-180" >
+    <label for="size"> 160-180cm </label></br>
+    <input type="checkbox" id="size180" name="size" value="180-200" >
+    <label for="size"> 180-200cm </label></br>
+    <input type="checkbox" id="size200" name="size" value="200-300" >
+    <label for="size"> 200cm+ </label></br>
+    
+    </br></br>
+
+    
+    <button type="submit">Submit</button>
+    <button type="reset" class="reset">Reset</button>
+    
+  </form>
+    </br></br>
+  <table id="generated-content">
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Desk Finish</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Dimensions</th>
+      <th>Link</th>
+    </tr>
+  </table>
+
+  <script type="text/javascript" src="project1_data.js"></script>
+</body>
+</html>

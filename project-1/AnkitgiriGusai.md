@@ -1,0 +1,1 @@
+My part in this project was to prepare the xml schema and populate the content with 25 individual items. In addition to that fetched relevant images, properly formated data types, escaped string types where necesaary and validated xml. I also helped in debuging xsd file to find out bugs and help fix them. 
