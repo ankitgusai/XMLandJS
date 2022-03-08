@@ -15,38 +15,25 @@ const generateRandomNumber = () => Math.floor(Math.random() * 40);
 const generateData = async () => timeout(1000).then(() => Array.from({ length: 20 }, generateRandomNumber))
 
 
-const convertToFeet = (meters) =>timeout(3500).then(()=>(meters * 3.2808))
-    
+const convertToFeet = (meters) => timeout(3500).then(() => (meters * 3.2808))
 
-const processData = async(data, converterFn) => data.map((value) => {
-    return {
-        val1: value,
-        res1: converterFn(value)
-    };
-});
+const processData = async (data, converterFn) =>
+    await Promise.all(data.map(async (value) => {
+        return { val1: value, res1: await converterFn(value) };
+    }))
 
 
-function logResult(meters, feet) {
-    console.log(`Converted ${meters}m to ${feet}ft`);
-}
 
-const main = () => {
+const logResult = (meters, feet) => console.log(`Converted ${meters}m to ${feet}ft`);
+
+
+const main = async () => {
     console.log("Start");
-    generateData()
-        .then((data) => processData(data, convertToFeet))
-        .then((processedData) => {
-            processedData.forEach(element => {
-                console.log(element.val1, element.res1)
-            })
-        })
-
-    // generateData(function (data) {
-    //     processData(data, function (value) {
-    //         convertToFeet(value, function (result) {
-    //             logResult(value, result);
-    //         });
-    //     });
-    // });
+    let data = await generateData()
+    let processedData = await processData(data, convertToFeet)
+    processedData.forEach(element => {
+        logResult(element.val1, element.res1)
+    })
     console.log("Finish");
 }
 
