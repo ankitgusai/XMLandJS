@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Quiz 2</title>
+</head>
+
+<body>
+    <h1>HTML form</h1>
+    <form onreset="onReset()">
+
+        <label for="input_value"> Checkbox1: </label>
+        <input type="text" name="name" id="input_value" placeholder="Enter Value" />
+        <br>
+        <br>
+
+        <label for="select_dropdown">Dropdown:</label>
+        <select name="select_dropdown" id="select_dropdown">
+            <option value="first">First</option>
+            <option value="second">Second</option>
+        </select>
+        <br><br>
+
+        <fieldset>
+            <legend>Checkboxes</legend>
+            <input type="checkbox" id="ch1" name="inputCheckbox1" value="VALUE">
+            <label for="r1">I have a bike</label><br>        
+            <input type="checkbox" id="ch2" name="inputCheckbox2" value="VALUE">
+            <label for="r2">I have a car</label><br>
+            <input type="checkbox" id="ch3" name="inputCheckbox3" value="VALUE">
+            <label for="r3">I have a boat</label>
+        </fieldset>
+        <br><br>
+        
+        <fieldset>
+            <legend>Radio Buttons</legend>
+            <input type="radio" id="r1" name="fav_language" value="Radio1">
+            <label for="r1">I have a bike</label><br>
+            <input type="radio" id="r2" name="fav_language" value="Radio2">
+            <label for="r2">I have a car</label><br>
+            <input type="radio" id="r3" name="fav_language" value="Radio3">
+            <label for="r3">I have a boat</label>
+        </fieldset>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+       
+    </form>
+</body>
+
+</html>

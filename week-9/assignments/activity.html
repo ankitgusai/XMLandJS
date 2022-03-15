@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Test Input</title>
+</head>
+
+<body>
+    <form onsubmit="onSubmit(event)" onreset="onReset()">
+        <input type="text" name="first_name" id="input-fname" placeholder="First name" /><br></br>
+        <input type="text" name="last_name" id="input-lname" placeholder="Last name" /><br></br>
+        <input type="text" name="email" id="input-email" placeholder="Email" /><br></br>
+        <input type="text" name="gender" id="input-gender" placeholder="Gender" /><br></br>
+        <input type="text" name="ip_address" id="input-ip" placeholder="IP" /><br></br>
+        <button type="submit">Apply filters</button>
+        <button type="reset">Reset</button>
+    </form>
+    <table id="table-main">
+        <thead>
+            <tr>
+                <td>
+                    <p>ID</p>
+                </td>
+                <td>
+                    <p>First name</p>
+                </td>
+                <td>
+                    <p>Last name</p>
+                </td>
+                <td>
+                    <p>Email</p>
+                </td>
+                <td>
+                    <p>Gender</p>
+                </td>
+                <td>
+                    <p>IP address</p>
+                </td>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+    <script type="text/javascript" src="./render-table.js"></script>
+
+</body>
+
+</html>
