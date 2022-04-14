@@ -1415,12 +1415,17 @@ const getAll = ({ id, name, gender, favoriteAnimal}= {}) =>
   new Promise((resolve) => {
     let result = Array.from(profiles);
 
+    console.log(`name ${name}`)
+
     if (id) {
       result = result.filter(({item}) => item.guid === id);
     }
 
     if (name) {
-      result = result.filter((item) => item.name === name);
+      result = result.filter((item) => {
+        console.log(`${item.name}  === ${name}  is {item.name === name}`)
+        return item.name === name
+      });
     }
     
     if (gender) {
@@ -1431,7 +1436,7 @@ const getAll = ({ id, name, gender, favoriteAnimal}= {}) =>
         result = result.filter((item) => item.favoriteAnimal === favoriteAnimal);
       }
 
-    resolve({ code: 200, data: JSON.stringify(result) });
+    resolve({ code: 200, data: result });
   });
 
 const getById = (id) =>
@@ -1439,7 +1444,7 @@ const getById = (id) =>
     const product = profiles.find((item) => item.guid === id);
 
     if (product) {
-      resolve({ code: 200, data: JSON.stringify(product) });
+      resolve({ code: 200, data: product });
     } else {
       resolve({
         code: 404,
@@ -1454,6 +1459,7 @@ module.exports = {
 };
 
 },{"../animalOwners.json":1}],3:[function(require,module,exports){
+(function (global){(function (){
 const { getAll } = require('./api/usersController');
 
 const renderTable = (data, _name, _gender, _favoriteAnimal) => {
@@ -1463,28 +1469,14 @@ const renderTable = (data, _name, _gender, _favoriteAnimal) => {
     throw new Error("No table element found");
   }
 
-  let source = data;
-
-  if (_name) {
-    source = source.filter(({ name }) => _name.toLowerCase().includes(name));
-  }
-
-  if (_gender) {
-    source = source.filter(({ gender }) => _gender.toLowerCase().includes(gender));
-  }
-  
-  if (_favoriteAnimal) {
-    source = source.filter(({ favoriteAnimal }) => _favoriteAnimal.toLowerCase().includes(favoriteAnimal));
-  }
-
-
-  const rows = source.reduce(
-    (acc, { guid, name, favoriteAnimal, address }) =>
+  const rows = data.reduce(
+    (acc, { guid, name, gender, favoriteAnimal, address }) =>
       acc +
       `<tr id="table-row-${guid}">
           <td>${guid}</td>
           <td>${name}</td>
           <td>${favoriteAnimal}</td>
+          <td>${gender}</td>
           <td>${address}</td></tr>`,
     ``
   );
@@ -1492,7 +1484,7 @@ const renderTable = (data, _name, _gender, _favoriteAnimal) => {
   tableBody.innerHTML = rows;
 };
 
-const onSubmit = (event) => {
+global.onSubmit = function(event) {
   event.preventDefault();
 
   const name = event.target.name.value;
@@ -1500,13 +1492,17 @@ const onSubmit = (event) => {
   const favoriteAnimal = event.target.favoriteAnimal.value;
   
 
-  getAll().then(({ data }) => renderTable(data, name, gender, favoriteAnimal));
+  getAll({name:name, gender:gender, favoriteAnimal:favoriteAnimal}).then(({ data }) => renderTable(data));
 };
 
-const onReset = () => {
+global.onReset = function() {
   getAll().then(({ data }) => renderTable(data));
-};
+  
+}
 
 
 getAll().then(({ data }) => renderTable(data));
+
+
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./api/usersController":2}]},{},[3]);

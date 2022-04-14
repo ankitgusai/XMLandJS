@@ -7,22 +7,7 @@ const renderTable = (data, _name, _gender, _favoriteAnimal) => {
     throw new Error("No table element found");
   }
 
-  let source = data;
-
-  if (_name) {
-    source = source.filter(({ name }) => _name.toLowerCase().includes(name));
-  }
-
-  if (_gender) {
-    source = source.filter(({ gender }) => _gender.toLowerCase().includes(gender));
-  }
-  
-  if (_favoriteAnimal) {
-    source = source.filter(({ favoriteAnimal }) => _favoriteAnimal.toLowerCase().includes(favoriteAnimal));
-  }
-
-
-  const rows = source.reduce(
+  const rows = data.reduce(
     (acc, { guid, name, gender, favoriteAnimal, address }) =>
       acc +
       `<tr id="table-row-${guid}">
@@ -37,7 +22,7 @@ const renderTable = (data, _name, _gender, _favoriteAnimal) => {
   tableBody.innerHTML = rows;
 };
 
-const onSubmit = (event) => {
+global.onSubmit = function(event) {
   event.preventDefault();
 
   const name = event.target.name.value;
@@ -45,12 +30,14 @@ const onSubmit = (event) => {
   const favoriteAnimal = event.target.favoriteAnimal.value;
   
 
-  getAll().then(({ data }) => renderTable(data, name, gender, favoriteAnimal));
+  getAll({name:name, gender:gender, favoriteAnimal:favoriteAnimal}).then(({ data }) => renderTable(data));
 };
 
-const onReset = () => {
+global.onReset = function() {
   getAll().then(({ data }) => renderTable(data));
-};
+  
+}
 
 
 getAll().then(({ data }) => renderTable(data));
+
