@@ -1,6 +1,6 @@
 const profiles = require("../animalOwners.json");
 
-const getAll = ({ id, name, gender, favoriteAnimal}) =>
+const getAll = ({ id, name, gender, favoriteAnimal}= {}) =>
   new Promise((resolve) => {
     let result = Array.from(profiles);
 
