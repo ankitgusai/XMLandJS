@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Test Input</title>
+  </head>
+  <body>
+    <form onsubmit="onSubmit(event)" onreset="onReset()">
+      <input
+        type="text"
+        name="name"
+        id="input-name-term"
+        placeholder="enter Name"
+      />
+
+      <input
+        type="text"
+        name="gender"
+        id="input-gender-term"
+        placeholder="enter Gender"
+      />
+
+      <input
+        type="text"
+        name="favoriteAnimal"
+        id="input-animal-term"
+        placeholder="enter Favorite Animal"
+      />
+      <button type="submit">Apply filters</button>
+      <button type="reset">Reset</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Favorite Animal</th>
+          <th>Gender</th>   
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <script type="text/javascript" src="./bundle.js"></script>
+  </body>
+</html>
