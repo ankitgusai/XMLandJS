@@ -1411,7 +1411,7 @@ module.exports=[
 },{}],2:[function(require,module,exports){
 const profiles = require("../animalOwners.json");
 
-const getAll = ({ id, name, gender, favoriteAnimal}) =>
+const getAll = ({ id, name, gender, favoriteAnimal}= {}) =>
   new Promise((resolve) => {
     let result = Array.from(profiles);
 

@@ -20,7 +20,7 @@ const getAll = ({ id, name, gender, favoriteAnimal}= {}) =>
         result = result.filter((item) => item.favoriteAnimal === favoriteAnimal);
       }
 
-    resolve({ code: 200, data: JSON.stringify(result) });
+    resolve({ code: 200, data: result });
   });
 
 const getById = (id) =>
@@ -28,7 +28,7 @@ const getById = (id) =>
     const product = profiles.find((item) => item.guid === id);
 
     if (product) {
-      resolve({ code: 200, data: JSON.stringify(product) });
+      resolve({ code: 200, data: product });
     } else {
       resolve({
         code: 404,
