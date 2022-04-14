@@ -23,12 +23,13 @@ const renderTable = (data, _name, _gender, _favoriteAnimal) => {
 
 
   const rows = source.reduce(
-    (acc, { guid, name, favoriteAnimal, address }) =>
+    (acc, { guid, name, gender, favoriteAnimal, address }) =>
       acc +
       `<tr id="table-row-${guid}">
           <td>${guid}</td>
           <td>${name}</td>
           <td>${favoriteAnimal}</td>
+          <td>${gender}</td>
           <td>${address}</td></tr>`,
     ``
   );
